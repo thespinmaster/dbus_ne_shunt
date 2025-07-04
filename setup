@@ -31,6 +31,10 @@ if [ $scriptAction == 'NONE' ] ; then
 	standardActionPrompt
 fi
 
-
-
+if yesNoPrompt "Please remove serial device is plugged in please remove it now and click next: " ; then
+	if yesNoPrompt "now add the device" ; then
+		if yesNoPrompt "found usb device: bla bla" ; then
+			if yesNoPrompt "click next to continue" ; then
+				echo "done..."
+				
 endScript 'INSTALL_FILES'
