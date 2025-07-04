@@ -1,1 +1,37 @@
+#!/bin/bash
 
+# this script installs RemoteGPIO v3.0 following SetupHelper rules (https://github.com/kwindrem/SetupHelper)
+#
+# this script will accept the following commands on the command line:
+#	setup install
+#	setup uninstall
+
+# this script will install any package that can use
+# the automated install and uninstall mechanisms provided by SetupHelper
+# that is, no custom prompting for command line exection
+#	and no custom installation such as editing replacement files
+#
+# link the package's setup script to this one:
+#	ln -s /data/SetupHelper/genericSetupScript /data/<package name>/setup
+
+# tell CommonResources to:
+#	prompt for install/uninstall
+#	auto install or auto uninstall
+#	then exit
+#	CommonResources will NOT return here !
+
+
+
+#### following line incorporates helper resources into this script
+source "/data/SetupHelper/HelperResources/IncludeHelpers"
+#### end of lines to include helper resources
+
+#standardPromptAndActions='yes'
+if [ $scriptAction == 'NONE' ] ; then
+	standardActionPrompt
+fi
+
+
+
+
+endScript 'INSTALL_FILES'
