@@ -36,5 +36,9 @@ if yesNoPrompt "Please remove serial device is plugged in please remove it now a
 		if yesNoPrompt "found usb device: bla bla" ; then
 			if yesNoPrompt "click next to continue" ; then
 				echo "done..."
-				
+			fi
+		fi
+	fi
+fi
+		
 endScript 'INSTALL_FILES'
